@@ -43,3 +43,21 @@
     padding: 1rem 2rem;
     font-size: 1.125rem
 }
+
+.btn[arial-label]{
+    position: absolute;
+    &::before{
+        content: "";
+        position: absolute;
+        border-radius: inherit;
+        inset: 0;
+        background-color: var(--bg-color);
+    }
+    &::after{
+        content: attr(arial-label);
+        background: var(--btn-bg-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
